@@ -1,0 +1,63 @@
+com.miruker.lib.mailtransferservice.BuildConfig
+com.miruker.lib.mailtransferservice.IMailTransfer$Stub:
+    private static final java.lang.String DESCRIPTOR
+    static final int TRANSACTION_getAppVersion
+    static final int TRANSACTION_transferFolder
+    static final int TRANSACTION_isTransferProcessActive
+    static final int TRANSACTION_getLabels
+    static final int TRANSACTION_login
+    static final int TRANSACTION_taskCancel
+    23:30:public static com.miruker.lib.mailtransferservice.IMailTransfer asInterface(android.os.IBinder)
+com.miruker.lib.mailtransferservice.IMailTransfer$Stub$Proxy
+com.miruker.lib.mailtransferservice.LabelResult:
+    public static final int RESULT_ERROR
+    public static final int RESULT_SUCCESS
+    12:12:public void setResult_code(int)
+    12:12:public void setLabels(java.util.List)
+    12:12:public void setMessage(java.lang.String)
+com.miruker.lib.mailtransferservice.R
+com.miruker.lib.mailtransferservice.R$attr
+com.miruker.lib.mailtransferservice.R$drawable
+com.miruker.lib.mailtransferservice.R$string
+com.miruker.lib.mailtransferservice.R$style
+com.miruker.lib.mailtransferservice.RemoteService:
+    private static final java.lang.String TAG
+    private static final java.lang.String DATE_FORMAT
+com.miruker.lib.mailtransferservice.ServerInfo:
+    public static final java.lang.String PROTOCOL_IMAP
+    public static final java.lang.String PROTOCOL_IMAPS
+    53:59:public ServerInfo(java.lang.String,java.lang.String,int,java.lang.String,java.lang.String)
+    7:7:public void setProtocol(java.lang.String)
+    7:7:public void setHostname(java.lang.String)
+    7:7:public void setPort(int)
+    7:7:public void setId(java.lang.String)
+    7:7:public void setPassword(java.lang.String)
+com.miruker.lib.mailtransferservice.TransferFolderResult:
+    public static final int RESULT_ERROR
+    public static final int RESULT_SUCCESS
+    public static final int RESULT_WARNING
+    public static final int RESULT_CANCEL
+    12:12:public void setResult_code(int)
+    12:12:public void setTotalCount(int)
+    12:12:public void setSuccessCount(int)
+    12:12:public void setErrList(java.util.List)
+    12:12:public void setErrorCount(int)
+    12:12:public void setMessage(java.lang.String)
+com.miruker.lib.mailtransferservice.TransferMessageResult:
+    public static final int RESULT_ERROR
+    public static final int RESULT_SUCCESS
+    5:5:public void setResult_code(int)
+    5:5:public void setMessage(java.lang.String)
+com.miruker.lib.mailtransferservice.Utils.ContactUtils:
+    14:14:public ContactUtils()
+    61:86:public static java.lang.String getPhoneAddressToDisplay(android.content.Context,java.lang.String)
+    97:111:public static java.util.List getDisplayNameList(android.content.Context)
+com.miruker.lib.mailtransferservice.Utils.DateUtils:
+    12:12:public DateUtils()
+com.miruker.lib.mailtransferservice.Utils.ImapUtils:
+    17:17:public ImapUtils()
+com.miruker.lib.mailtransferservice.Utils.MailUtils:
+    23:23:public MailUtils()
+com.miruker.lib.mailtransferservice.Utils.NotificationUtility:
+    14:14:public NotificationUtility()
+    42:44:public static void clearNotification(android.content.Context)
