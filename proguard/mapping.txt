@@ -42,7 +42,7 @@ com.miruker.lib.mailtransferservice.RemoteService$1 -> com.miruker.lib.mailtrans
     108:108:com.miruker.lib.mailtransferservice.LabelResult getLabels(com.miruker.lib.mailtransferservice.ServerInfo) -> a
     113:113:java.lang.String login(com.miruker.lib.mailtransferservice.ServerInfo) -> b
     118:119:boolean taskCancel() -> c
-    128:270:com.miruker.lib.mailtransferservice.TransferFolderResult transferMailProc(com.miruker.lib.mailtransferservice.ServerInfo,java.lang.String,com.miruker.lib.mailtransferservice.ServerInfo,java.lang.String,java.lang.String,boolean,boolean,java.lang.String,boolean) -> b
+    128:272:com.miruker.lib.mailtransferservice.TransferFolderResult transferMailProc(com.miruker.lib.mailtransferservice.ServerInfo,java.lang.String,com.miruker.lib.mailtransferservice.ServerInfo,java.lang.String,java.lang.String,boolean,boolean,java.lang.String,boolean) -> b
 com.miruker.lib.mailtransferservice.RemoteService$1$1 -> com.miruker.lib.mailtransferservice.e:
     com.miruker.lib.mailtransferservice.RemoteService$1 this$1 -> a
     java.lang.String val$filterTargetDate -> b
@@ -121,8 +121,9 @@ com.miruker.lib.mailtransferservice.Utils.MailUtils -> com.miruker.lib.mailtrans
     151:166:java.lang.String getToAddress(javax.mail.internet.MimeMessage) -> b
     171:174:boolean isContentTypeCheck(java.lang.String) -> a
     191:243:com.miruker.lib.mailtransferservice.TransferMessageResult transfer(android.content.Context,javax.mail.Session,javax.mail.Folder,javax.mail.internet.MimeMessage,boolean) -> a
-com.miruker.lib.mailtransferservice.Utils.NotificationUtility -> com.miruker.lib.mailtransferservice.a.e:
+com.miruker.lib.mailtransferservice.Utils.NotificationUtils -> com.miruker.lib.mailtransferservice.a.e:
     20:34:void showNotification(android.content.Context,java.lang.String,java.lang.String,java.lang.String) -> a
+    42:44:void clearNotification(android.content.Context) -> a
 com.sun.activation.registries.LineTokenizer -> com.sun.activation.registries.LineTokenizer:
     int currentPosition -> currentPosition
     int maxPosition -> maxPosition

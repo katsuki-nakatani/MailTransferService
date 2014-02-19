@@ -11,7 +11,7 @@ import com.miruker.lib.mailtransferservice.R;
 
 
 
-public class NotificationUtility {
+public class NotificationUtils {
 
 	
 	@SuppressWarnings("deprecation")

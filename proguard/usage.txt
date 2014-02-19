@@ -58,6 +58,5 @@ com.miruker.lib.mailtransferservice.Utils.ImapUtils:
     17:17:public ImapUtils()
 com.miruker.lib.mailtransferservice.Utils.MailUtils:
     23:23:public MailUtils()
-com.miruker.lib.mailtransferservice.Utils.NotificationUtility:
-    14:14:public NotificationUtility()
-    42:44:public static void clearNotification(android.content.Context)
+com.miruker.lib.mailtransferservice.Utils.NotificationUtils:
+    14:14:public NotificationUtils()

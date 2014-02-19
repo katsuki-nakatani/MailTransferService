@@ -31,7 +31,7 @@ import android.util.Log;
 import com.miruker.lib.mailtransferservice.Utils.DateUtils;
 import com.miruker.lib.mailtransferservice.Utils.ImapUtils;
 import com.miruker.lib.mailtransferservice.Utils.MailUtils;
-import com.miruker.lib.mailtransferservice.Utils.NotificationUtility;
+import com.miruker.lib.mailtransferservice.Utils.NotificationUtils;
 
 /**
  * @author katsuki-nakatani
@@ -168,7 +168,7 @@ public class RemoteService extends Service {
 											if(targetDate.compareTo(DateUtils.toCalendar(filterTargetDate, DATE_FORMAT).getTime()) > 0)
 												return false;	//date after						
 										} catch (ParseException e) {
-												Log.e(TAG, e.getMessage());
+												Log.e(TAG, e.getMessage());												
 												return false;
 										}
 										catch (MessagingException e) {
@@ -196,7 +196,7 @@ public class RemoteService extends Service {
 								subject = "no subject";
 							//Notification Process
 							if(isShowNotification)
-								NotificationUtility.showNotification(getApplicationContext(), getString(R.string.mesNotification), String.format(getString(R.string.mesTitle),sourceLabel), subject);
+								NotificationUtils.showNotification(getApplicationContext(), getString(R.string.mesNotification), String.format(getString(R.string.mesTitle),sourceLabel), subject);
 							if(mIsCanceld){
 								return new TransferFolderResult(TransferFolderResult.RESULT_CANCEL, totalCount, successCount, errorCount, errorMessage,null);
 							}
@@ -267,6 +267,8 @@ public class RemoteService extends Service {
 						}
 					}			
 					mIsTaskRunning = false;
+					//notification Clear
+					NotificationUtils.clearNotification(getApplicationContext());
 					return new TransferFolderResult(TransferFolderResult.RESULT_SUCCESS, totalCount, successCount, errorCount, errorMessage,errorMessages);
 					
 		}
