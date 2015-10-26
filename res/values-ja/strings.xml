@@ -1,6 +1,0 @@
-<resources>
-
-    <string name="app_name">メール転送サービス</string>
-    <string name="mesNotification">メールを転送しています</string>
-    <string name="mesTitle">%sフォルダを転送しています</string>
-</resources>

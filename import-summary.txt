@@ -1,0 +1,67 @@
+ECLIPSE ANDROID PROJECT IMPORT SUMMARY
+======================================
+
+Ignored Files:
+--------------
+The following files were *not* copied into the new Gradle project; you
+should evaluate whether these are still needed in your project and if
+so manually move them:
+
+* .DS_Store
+* .gitignore
+* .idea/
+* .idea/.name
+* .idea/MailTransferService.iml
+* .idea/compiler.xml
+* .idea/copyright/
+* .idea/copyright/profiles_settings.xml
+* .idea/dictionaries/
+* .idea/dictionaries/katsuki_nakatani.xml
+* .idea/misc.xml
+* .idea/modules.xml
+* .idea/vcs.xml
+* .idea/workspace.xml
+* lib/
+* lib/lombok.jar
+* proguard/
+* proguard/dump.txt
+* proguard/mapping.txt
+* proguard/seeds.txt
+* proguard/usage.txt
+
+Moved Files:
+------------
+Android Gradle projects use a different directory structure than ADT
+Eclipse projects. Here's how the projects were restructured:
+
+* AndroidManifest.xml => app/src/main/AndroidManifest.xml
+* libs/activation.jar => app/libs/activation.jar
+* libs/additionnal.jar => app/libs/additionnal.jar
+* libs/mail.jar => app/libs/mail.jar
+* lint.xml => app/lint.xml
+* proguard-project.txt => app/proguard-project.txt
+* res/ => app/src/main/res/
+* src/ => app/src/main/java/
+* src/.DS_Store => app/src/main/resources/.DS_Store
+* src/com/.DS_Store => app/src/main/resources/com/.DS_Store
+* src/com/miruker/.DS_Store => app/src/main/resources/com/miruker/.DS_Store
+* src/com/miruker/lib/.DS_Store => app/src/main/resources/com/miruker/lib/.DS_Store
+* src/com/miruker/lib/mailtransferservice/IMailTransfer.aidl => app/src/main/aidl/com/miruker/lib/mailtransferservice/IMailTransfer.aidl
+* src/com/miruker/lib/mailtransferservice/LabelResult.aidl => app/src/main/aidl/com/miruker/lib/mailtransferservice/LabelResult.aidl
+* src/com/miruker/lib/mailtransferservice/ServerInfo.aidl => app/src/main/aidl/com/miruker/lib/mailtransferservice/ServerInfo.aidl
+* src/com/miruker/lib/mailtransferservice/TransferFolderResult.aidl => app/src/main/aidl/com/miruker/lib/mailtransferservice/TransferFolderResult.aidl
+
+Next Steps:
+-----------
+You can now build the project. The Gradle project needs network
+connectivity to download dependencies.
+
+Bugs:
+-----
+If for some reason your project does not build, and you determine that
+it is due to a bug or limitation of the Eclipse to Gradle importer,
+please file a bug at http://b.android.com with category
+Component-Tools.
+
+(This import summary is for your information only, and can be deleted
+after import once you are satisfied with the results.)

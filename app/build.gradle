@@ -1,0 +1,29 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 23
+    buildToolsVersion "23.0.1"
+
+    defaultConfig {
+        applicationId "com.miruker.lib.mailtransferservice"
+        minSdkVersion 14
+        targetSdkVersion 22
+        versionCode = 5
+        versionName = "2.0"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-project.txt'
+        }
+    }
+}
+
+dependencies {
+    compile files('libs/activation.jar')
+    compile files('libs/additionnal.jar')
+    compile files('libs/mail.jar')
+    provided 'org.projectlombok:lombok:1.16.6'
+    compile 'com.android.support:support-v4:23.1.0'
+}
