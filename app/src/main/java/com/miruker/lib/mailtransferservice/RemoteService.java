@@ -11,7 +11,6 @@ import android.content.pm.PackageManager;
 import android.content.pm.PackageManager.NameNotFoundException;
 import android.os.IBinder;
 import android.os.RemoteException;
-import android.support.v4.content.ContextCompat;
 import android.support.v4.content.PermissionChecker;
 import android.text.TextUtils;
 import android.util.Log;
@@ -129,7 +128,8 @@ public class RemoteService extends Service {
                                                       boolean isShowNotification)
                 throws RemoteException {
 
-            if(ContextCompat.checkSelfPermission(getApplicationContext(), Manifest.permission.READ_CONTACTS) != PermissionChecker.PERMISSION_GRANTED){
+            if (PermissionChecker.checkSelfPermission(getApplicationContext(), Manifest.permission.READ_CONTACTS) != PermissionChecker.PERMISSION_GRANTED) {
+                NotificationUtils.showNotification(getApplicationContext(), getString(R.string.mesPermissionError), getString(R.string.mesError), getString(R.string.mesPermissionError));
                 return new TransferFolderResult(
                         TransferFolderResult.RESULT_ERROR,
                         0,
@@ -140,7 +140,6 @@ public class RemoteService extends Service {
                 );
 
             }
-
 
 
             int totalCount = 0;

@@ -1,6 +1,7 @@
 <resources>
 
     <string name="app_name">メール転送サービス</string>
+    <string name="mesError">エラー</string>
     <string name="mesNotification">メールを転送しています</string>
     <string name="mesTitle">%sフォルダを転送しています</string>
     <string name="mesPermissionError">転送サービスアプリのパーミッションが許可されていません\n設定から許可してください</string>

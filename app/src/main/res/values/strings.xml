@@ -1,6 +1,7 @@
 <resources>
 
     <string name="app_name">MailTransferService</string>
+    <string name="mesError">error</string>
     <string name="mesNotification">Transferred Mail Data</string>
     <string name="mesTitle">%s Folder Transferred</string>
     <string name="mesPermissionError">Transfer Service Not Permission</string>
