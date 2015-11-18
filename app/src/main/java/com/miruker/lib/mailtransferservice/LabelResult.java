@@ -46,7 +46,7 @@ class LabelResult implements Parcelable {
 
     private LabelResult(Parcel parcel) {
         result_code = parcel.readInt();
-        labels = new ArrayList<String>();
+        labels = new ArrayList<>();
         parcel.readStringList(labels);
         message = parcel.readString();
     }

@@ -57,7 +57,7 @@ class TransferFolderResult implements Parcelable {
         successCount = parcel.readInt();
         errorCount = parcel.readInt();
         message = parcel.readString();
-        errList = new ArrayList<String>();
+        errList = new ArrayList<>();
         parcel.readStringList(errList);
     }
 

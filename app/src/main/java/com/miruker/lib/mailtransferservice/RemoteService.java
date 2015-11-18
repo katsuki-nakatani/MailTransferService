@@ -3,7 +3,6 @@
  */
 package com.miruker.lib.mailtransferservice;
 
-import android.Manifest;
 import android.app.Service;
 import android.content.Intent;
 import android.content.pm.PackageInfo;
@@ -11,7 +10,6 @@ import android.content.pm.PackageManager;
 import android.content.pm.PackageManager.NameNotFoundException;
 import android.os.IBinder;
 import android.os.RemoteException;
-import android.support.v4.content.PermissionChecker;
 import android.text.TextUtils;
 import android.util.Log;
 
@@ -89,6 +87,20 @@ public class RemoteService extends Service {
                                                    boolean isFilterTargetSeenFlg, String filterTargetDate,
                                                    boolean isShowNotification)
                 throws RemoteException {
+          /*  if (PermissionChecker.checkSelfPermission(getApplicationContext(), Manifest.permission.READ_CONTACTS) != PermissionChecker.PERMISSION_GRANTED) {
+                NotificationUtils.showNotification(getApplicationContext(), getString(R.string.mesPermissionError), getString(R.string.mesError), getString(R.string.mesPermissionError));
+                return new TransferFolderResult(
+                        TransferFolderResult.RESULT_ERROR,
+                        0,
+                        0,
+                        0,
+                        getString(R.string.mesPermissionError),
+                        new ArrayList<String>()
+                );
+
+            }
+            */
+
             if (!mIsTaskRunning) {
                 mIsTaskRunning = true;
                 TransferFolderResult result = transferMailProc(source, sourceLabel, target, targetLabel, successTrashLabel, isDocomoConvertFlg, isFilterTargetSeenFlg, filterTargetDate, isShowNotification);
@@ -128,18 +140,7 @@ public class RemoteService extends Service {
                                                       boolean isShowNotification)
                 throws RemoteException {
 
-            if (PermissionChecker.checkSelfPermission(getApplicationContext(), Manifest.permission.READ_CONTACTS) != PermissionChecker.PERMISSION_GRANTED) {
-                NotificationUtils.showNotification(getApplicationContext(), getString(R.string.mesPermissionError), getString(R.string.mesError), getString(R.string.mesPermissionError));
-                return new TransferFolderResult(
-                        TransferFolderResult.RESULT_ERROR,
-                        0,
-                        0,
-                        0,
-                        getString(R.string.mesPermissionError),
-                        new ArrayList<String>()
-                );
 
-            }
 
 
             int totalCount = 0;

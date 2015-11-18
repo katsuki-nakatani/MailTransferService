@@ -44,7 +44,6 @@ public class ContactUtils {
             }
         if (cursor != null)
             cursor.close();
-
         return displayName;
     }
 
