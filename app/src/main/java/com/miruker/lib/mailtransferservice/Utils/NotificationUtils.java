@@ -4,7 +4,7 @@ package com.miruker.lib.mailtransferservice.Utils;
 import android.app.Notification;
 import android.app.NotificationManager;
 import android.content.Context;
-import android.graphics.BitmapFactory;
+import android.graphics.Color;
 import android.os.Build;
 
 import com.miruker.lib.mailtransferservice.R;
@@ -16,19 +16,24 @@ public class NotificationUtils {
     @SuppressWarnings("deprecation")
     public static void showNotification(Context con, String notifyMessage, String title, String summary) {
         NotificationManager notificationManager = (NotificationManager) con.getSystemService(Context.NOTIFICATION_SERVICE);
-        Notification.Builder notification = new Notification.Builder(con);
-        notification.setWhen(System.currentTimeMillis());
-        notification.setTicker(notifyMessage);
-        notification.setLargeIcon(BitmapFactory.decodeResource(con.getResources(), R.drawable.ic_stat_big));
-        notification.setContentTitle(con.getString(R.string.mesNotification));
-        notification.setContentText(summary);
-        notification.setSmallIcon(R.drawable.ic_stat_small);
-        notification.setAutoCancel(true);
+        Notification.Builder builder = new Notification.Builder(con);
+        builder.setWhen(System.currentTimeMillis());
+        builder.setTicker(notifyMessage);
+        builder.setContentTitle(con.getString(R.string.mesNotification));
+        builder.setContentText(summary);
+        builder.setSmallIcon(R.drawable.ic_stat_small);
+        builder.setAutoCancel(true);
+
+        if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+            builder.setColor(Color.GRAY);
+            builder.setPriority(Notification.PRIORITY_DEFAULT);
+            builder.setVisibility(Notification.VISIBILITY_SECRET);
+        }
 
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN)
-            notificationManager.notify(R.string.app_name, notification.build());
+            notificationManager.notify(R.string.app_name, builder.build());
         else
-            notificationManager.notify(R.string.app_name, notification.getNotification());
+            notificationManager.notify(R.string.app_name, builder.getNotification());
     }
 
     /**
